@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS =-g -Wall
 
-SRC = distance.c geofencelib.c
+SRC = geofence_example.c geofencelib.c
 EXE= GEOFENCING_EXE
 
 
