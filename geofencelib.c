@@ -29,3 +29,21 @@ BOOL isPointInsideFence(double fence_radius, double center_lat, double center_lo
 
     return ( getDistanceFromLatLonInMeter(center_lat, center_lon, position_lat, position_lon) < fence_radius );
 }
+
+/* Indicates if a given position is inside a known polygon              */
+/* Arg:                                                                 */
+/* - int number_of_intersections:                                       */
+/*   how many times a ray starting from and going any fixed direction,  */
+/*   intersects the edges of the polygon                                */
+BOOL isPointInsidePolygon(int number_of_intersections)
+{
+    /* Ray Castling Algorithm */
+    if(number_of_intersections % 2 == 1)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
